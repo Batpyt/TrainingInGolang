@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -10,7 +9,7 @@ import (
 
 注意：答案中不可以包含重复的三元组。
 
- 
+
 
 示例 1：
 
@@ -28,12 +27,12 @@ import (
 来源：力扣（LeetCode）
 链接：https://leetcode.cn/problems/3sum
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- */
+*/
 
 /*
 先排序，然后将问题转化为双指针问题
 -a = b + c
- */
+*/
 func threeSum(nums []int) [][]int {
 	sort.Ints(nums)
 	res := make([][]int, 0)
@@ -41,7 +40,7 @@ func threeSum(nums []int) [][]int {
 	//第一个指针，定位a
 	for first := 0; first < len(nums); first++ {
 		//若与上一个相同则跳过
-		if first > 0 && nums[first] == nums[first - 1] {
+		if first > 0 && nums[first] == nums[first-1] {
 			continue
 		}
 		//第三个指针，定位c，且从后往前移动
@@ -49,14 +48,14 @@ func threeSum(nums []int) [][]int {
 		target := -1 * nums[first]
 
 		//第二个指针，定位b，从a的后一个开始向后移动
-		for second := first+1; second < len(nums); second++ {
+		for second := first + 1; second < len(nums); second++ {
 			//相同则跳过
-			if second > first + 1 && nums[second] == nums[second - 1] {
+			if second > first+1 && nums[second] == nums[second-1] {
 				continue
 			}
 
 			//若 -a < b + c，将c的指针继续向前移动
-			for second < third && nums[second] + nums[third] > target {
+			for second < third && nums[second]+nums[third] > target {
 				third--
 			}
 
@@ -66,7 +65,7 @@ func threeSum(nums []int) [][]int {
 			}
 
 			//记录符合条件的结果
-			if nums[second] + nums[third] == target {
+			if nums[second]+nums[third] == target {
 				res = append(res, []int{nums[first], nums[second], nums[third]})
 			}
 		}
@@ -74,6 +73,6 @@ func threeSum(nums []int) [][]int {
 	return res
 }
 
-func main() {
-	fmt.Println(threeSum([]int{-1,0,1,2,-1,-4}))
-}
+//func main() {
+//	fmt.Println(threeSum([]int{-1,0,1,2,-1,-4}))
+//}
