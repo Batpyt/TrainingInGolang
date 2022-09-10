@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 给你一个数组 nums ，数组中有 2n 个元素，按 [x1,x2,...,xn,y1,y2,...,yn] 的格式排列。
 
@@ -41,6 +39,6 @@ func shuffle(nums []int, n int) []int {
 	return res
 }
 
-func main() {
-	fmt.Println(shuffle([]int{2, 5, 1, 3, 4, 7}, 3))
-}
+//func main() {
+//	fmt.Println(shuffle([]int{2, 5, 1, 3, 4, 7}, 3))
+//}
