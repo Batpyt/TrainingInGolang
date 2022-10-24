@@ -25,9 +25,12 @@ left 的长度要尽可能小。
 
 func partitionDisjoint(nums []int) int {
 	n := len(nums)
+	//维护三个变量，左边数组最大值，左边数组边界，当前最大值
 	leftMax, leftPos, curMax := nums[0], 0, nums[0]
 	for i := 1; i < n-1; i++ {
+		//每往后一个都计算出当前最大值
 		curMax = max(curMax, nums[i])
+		//当当前遍历到的数小于左边数组最大值时，要把当前的数归于左边数组
 		if nums[i] < leftMax {
 			leftMax = curMax
 			leftPos = i
