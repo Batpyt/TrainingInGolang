@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 给你一个字符串 s，请你返回 两个相同字符之间的最长子字符串的长度 ，计算长度时不含这两个字符。如果不存在这样的子字符串，返回 -1 。
 
@@ -30,13 +28,13 @@ import "fmt"
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
 
-func main() {
-	fmt.Println(maxLengthBetweenEqualCharacters("aa"))
-	fmt.Println(maxLengthBetweenEqualCharacters("abca"))
-	fmt.Println(maxLengthBetweenEqualCharacters("cbzxy"))
-	fmt.Println(maxLengthBetweenEqualCharacters("cabbac"))
-	fmt.Println(maxLengthBetweenEqualCharacters("ojdncpvyneq"))
-}
+//func main() {
+//	fmt.Println(maxLengthBetweenEqualCharacters("aa"))
+//	fmt.Println(maxLengthBetweenEqualCharacters("abca"))
+//	fmt.Println(maxLengthBetweenEqualCharacters("cbzxy"))
+//	fmt.Println(maxLengthBetweenEqualCharacters("cabbac"))
+//	fmt.Println(maxLengthBetweenEqualCharacters("ojdncpvyneq"))
+//}
 
 func maxLengthBetweenEqualCharacters(s string) int {
 	firstIndexList := make([]int, 26)
