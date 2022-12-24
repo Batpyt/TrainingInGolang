@@ -44,6 +44,7 @@ func buildTree(preorder []int, inorder []int) *TreeNode {
 
 	// 递归地构造左子树，并连接到根节点
 	// preorder[1: len(inorder[:i])+1] 为前序遍历的【左】，inorder[:i] 为中序遍历的【左】
+	//其中，【len(inorder[:i])+1】是根据前序遍历根的位置来计算左子树的长度
 	root.Left = buildTree(preorder[1:len(inorder[:i])+1], inorder[:i])
 
 	// 递归地构造右子树，并连接到根节点
