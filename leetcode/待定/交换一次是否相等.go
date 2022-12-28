@@ -68,6 +68,6 @@ func areAlmostEqual(s1 string, s2 string) bool {
 	return false
 }
 
-func main() {
-	fmt.Println(areAlmostEqual("bank", "kanb"))
-}
+//func main() {
+//	fmt.Println(areAlmostEqual("bank", "kanb"))
+//}
