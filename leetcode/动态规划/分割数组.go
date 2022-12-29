@@ -1,4 +1,4 @@
-package 动态规划
+package main
 
 /*
 给定一个数组 nums ，将其划分为两个连续子数组 left 和 right， 使得：

@@ -1,10 +1,8 @@
 package main
 
-import "fmt"
-
-func main() {
-	fmt.Println(twoOutOfThree([]int{1, 1, 3, 2}, []int{3, 2}, []int{3}))
-}
+//func main() {
+//	fmt.Println(twoOutOfThree([]int{1, 1, 3, 2}, []int{3, 2}, []int{3}))
+//}
 
 func twoOutOfThree(nums1 []int, nums2 []int, nums3 []int) []int {
 	new1 := quchong(nums1)
