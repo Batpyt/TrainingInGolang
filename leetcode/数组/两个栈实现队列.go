@@ -1,4 +1,4 @@
-package 数组
+package main
 
 type CQueue struct {
 	inStack  []int
