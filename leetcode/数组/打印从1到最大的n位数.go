@@ -1,13 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
-func main() {
-	fmt.Println(printNumbers(2))
-}
+//func main() {
+//	fmt.Println(printNumbers(2))
+//}
 
 func printNumbers(n int) []int {
 	max := 0
