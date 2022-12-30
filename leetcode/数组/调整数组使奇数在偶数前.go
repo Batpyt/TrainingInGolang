@@ -1,10 +1,8 @@
 package main
 
-import "fmt"
-
-func main() {
-	fmt.Println(exchange([]int{1, 2, 3, 4}))
-}
+//func main() {
+//	fmt.Println(exchange([]int{1, 2, 3, 4}))
+//}
 
 func exchange(nums []int) []int {
 	res := make([]int, len(nums))
