@@ -1,15 +1,14 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
 
-func main() {
-	fmt.Println(areNumbersAscending("1 2 uioioi 4 5 ioioopp 6"))
-	fmt.Println(areNumbersAscending("1 4 uioioi 4 5 ioioopp 6"))
-}
+//func main() {
+//	fmt.Println(areNumbersAscending("1 2 uioioi 4 5 ioioopp 6"))
+//	fmt.Println(areNumbersAscending("1 4 uioioi 4 5 ioioopp 6"))
+//}
 
 func areNumbersAscending(s string) bool {
 	list := strings.Split(s, " ")
