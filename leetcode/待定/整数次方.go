@@ -1,8 +1,8 @@
 package main
 
-func main() {
-
-}
+//func main() {
+//
+//}
 
 func myPow(x float64, n int) float64 {
 	if n >= 0 {

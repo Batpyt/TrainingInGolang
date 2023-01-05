@@ -1,4 +1,4 @@
-package 链表
+package main
 
 func getKthFromEnd(head *ListNode, k int) *ListNode {
 	fast := head
