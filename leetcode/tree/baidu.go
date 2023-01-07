@@ -1,12 +1,6 @@
-package main
+package tree
 
 import "fmt"
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
 
 /*
 0 1 2 3 4 5 6 7 8 9 10 11
@@ -20,6 +14,10 @@ type TreeNode struct {
 //	trees := tree([]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11})
 //	preorder(trees)
 //}
+
+/*
+构建完全二叉树
+*/
 
 func tree(list []int) *TreeNode {
 	treeNodes := make([]*TreeNode, 0)
@@ -55,8 +53,4 @@ func preorder(root *TreeNode) {
 	fmt.Println(fmt.Sprintf("%v ", root.Val))
 	preorder(root.Left)
 	preorder(root.Right)
-}
-
-func levelOrder(root *TreeNode) {
-
 }
