@@ -1,10 +1,8 @@
 package main
 
-import "fmt"
-
-func main() {
-	fmt.Println(prefixCount([]string{"pay", "attention", "practice", "attend"}, "at"))
-}
+//func main() {
+//	fmt.Println(prefixCount([]string{"pay", "attention", "practice", "attend"}, "at"))
+//}
 
 func prefixCount(words []string, pref string) int {
 	res := 0

@@ -9,9 +9,9 @@ import "fmt"
 [1,2,3,6,9,8,7,4,5]
 */
 
-func main() {
-	fmt.Println(spiralOrder([][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}))
-}
+//func main() {
+//	fmt.Println(spiralOrder([][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}))
+//}
 
 type pair struct {
 	i int
