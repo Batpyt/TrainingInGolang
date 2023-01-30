@@ -30,6 +30,8 @@ func mergeInBetween(list1 *ListNode, a int, b int, list2 *ListNode) *ListNode {
 	left := &ListNode{}
 	right := &ListNode{}
 	for true {
+
+		//画一下就知道为什么这样了
 		if a == 1 {
 			left = list1
 		}
