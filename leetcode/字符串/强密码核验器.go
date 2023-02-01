@@ -6,9 +6,9 @@ import (
 	"unicode"
 )
 
-func main() {
-	fmt.Println(strongPasswordCheckerII("IloveLe3tcode!"))
-}
+//func main() {
+//	fmt.Println(strongPasswordCheckerII("IloveLe3tcode!"))
+//}
 
 func strongPasswordCheckerII(password string) bool {
 	if len(password) < 8 {
