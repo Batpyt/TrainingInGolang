@@ -33,15 +33,19 @@ func main() {
 }
 
 func lengthOfLongestSubstring(s string) int {
+	//已存在的字符
 	exist := make(map[string]bool)
-
+	//滑动窗口，右指针
 	var right, res int
 
+	//i为左指针
 	for i := 0; i < len(s); i++ {
+		//当左指针不是最左边时，在已存在的map中删除前一个
 		if i > 0 {
 			delete(exist, string(s[i-1]))
 		}
 
+		//右指针右移直到遇到重复字符
 		for right < len(s) {
 			if _, ok := exist[string(s[right])]; !ok {
 				exist[string(s[right])] = true
