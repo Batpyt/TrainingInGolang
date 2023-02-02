@@ -1,13 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
-func main() {
-	fmt.Println(decodeMessage("the quick brown fox jumps over the lazy dog", "vkbs bs t suepuv"))
-}
+//func main() {
+//	fmt.Println(decodeMessage("the quick brown fox jumps over the lazy dog", "vkbs bs t suepuv"))
+//}
 
 func decodeMessage(key string, message string) string {
 	decode := make(map[string]string)
