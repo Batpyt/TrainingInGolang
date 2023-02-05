@@ -1,19 +1,17 @@
 package main
 
-import "fmt"
-
-func main() {
-	c := Constructor(2)
-	fmt.Println(c)
-	c.Put(1, 1)
-	fmt.Println(c.cache)
-	c.Put(2, 2)
-	fmt.Println(c.cache)
-	c.Get(1)
-	fmt.Println(c.cache)
-	c.Put(3, 3)
-	fmt.Println(c.cache)
-}
+//func main() {
+//	c := Constructor(2)
+//	fmt.Println(c)
+//	c.Put(1, 1)
+//	fmt.Println(c.cache)
+//	c.Put(2, 2)
+//	fmt.Println(c.cache)
+//	c.Get(1)
+//	fmt.Println(c.cache)
+//	c.Put(3, 3)
+//	fmt.Println(c.cache)
+//}
 
 /*
 通过双向链表实现key的排序，kv值存在链表的节点中
@@ -30,6 +28,7 @@ type LRUCache struct {
 
 /*
 链表中存放kv和前后节点
+存key的用处是超过容量删除队尾元素时通过key来删除map中元素
 */
 
 type DLinkedNode struct {
