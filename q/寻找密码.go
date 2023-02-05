@@ -1,25 +1,18 @@
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-	"strings"
-)
-
-func main() {
-	reader := bufio.NewReader(os.Stdin)
-
-	str, _, _ := reader.ReadLine()
-	keys := strings.Split(string(str), " ")
-	if len(keys) <= 1 {
-		fmt.Println("")
-		return
-	}
-
-	res := solve(keys)
-	fmt.Println(res)
-}
+//func main() {
+//	reader := bufio.NewReader(os.Stdin)
+//
+//	str, _, _ := reader.ReadLine()
+//	keys := strings.Split(string(str), " ")
+//	if len(keys) <= 1 {
+//		fmt.Println("")
+//		return
+//	}
+//
+//	res := solve(keys)
+//	fmt.Println(res)
+//}
 
 func solve(keys []string) string {
 	keyMap := make(map[string]bool)
