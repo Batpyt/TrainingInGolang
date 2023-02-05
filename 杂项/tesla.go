@@ -2,14 +2,14 @@ package main
 
 import "fmt"
 
-func main() {
-	//test := 10011
-	//Solution(test)
-	//fmt.Println(reverse(test))
-
-	fmt.Println(subarraySum([]int{2, -2, 3, 0, 4, -7}))
-	//fmt.Println(citiesNetworkRank([]int{1, 2, 3, 3}, []int{2, 3, 1, 4}, 4))
-}
+//func main() {
+//	//test := 10011
+//	//Solution(test)
+//	//fmt.Println(reverse(test))
+//
+//	fmt.Println(subarraySum([]int{2, -2, 3, 0, 4, -7}))
+//	//fmt.Println(citiesNetworkRank([]int{1, 2, 3, 3}, []int{2, 3, 1, 4}, 4))
+//}
 
 func Solution(N int) {
 	var enable_print int
@@ -21,7 +21,7 @@ func Solution(N int) {
 			//fmt.Println("change enable")
 		}
 		if enable_print == 1 {
-			fmt.Print(N%10, "q ")
+			fmt.Print(N%10, "杂项 ")
 		}
 		N = N / 10
 	}
