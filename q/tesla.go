@@ -7,8 +7,8 @@ func main() {
 	//Solution(test)
 	//fmt.Println(reverse(test))
 
-	//fmt.Println(subarraySum([]int{2, -2,3,0,4,-7}))
-	fmt.Println(citiesNetworkRank([]int{1, 2, 3, 3}, []int{2, 3, 1, 4}, 4))
+	fmt.Println(subarraySum([]int{2, -2, 3, 0, 4, -7}))
+	//fmt.Println(citiesNetworkRank([]int{1, 2, 3, 3}, []int{2, 3, 1, 4}, 4))
 }
 
 func Solution(N int) {

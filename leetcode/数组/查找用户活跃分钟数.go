@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 给你用户在 LeetCode 的操作日志，和一个整数 k 。日志用一个二维整数数组 logs 表示，其中每个 logs[i] = [IDi, timei] 表示 ID 为 IDi 的用户在 timei 分钟时执行了某个操作。
 
@@ -37,9 +35,9 @@ ID=2 的用户执行操作的分钟分别是：2 和 3 。因此，该用户的�
 链接：https://leetcode.cn/problems/finding-the-users-active-minutes
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func main() {
-	fmt.Println(findingUsersActiveMinutes([][]int{{0, 5}, {1, 2}, {0, 2}, {0, 5}, {1, 3}}, 5))
-}
+//func main() {
+//	fmt.Println(findingUsersActiveMinutes([][]int{{0, 5}, {1, 2}, {0, 2}, {0, 5}, {1, 3}}, 5))
+//}
 
 func findingUsersActiveMinutes(logs [][]int, k int) []int {
 	res := make([]int, k)

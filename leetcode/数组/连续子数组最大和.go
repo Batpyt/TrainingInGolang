@@ -1,8 +1,8 @@
 package main
 
-func main() {
-
-}
+//func main() {
+//
+//}
 
 func maxSubArray(nums []int) int {
 	max := nums[0]
