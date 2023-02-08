@@ -2,14 +2,15 @@ package main
 
 import "fmt"
 
-//func main() {
-//	//test := 10011
-//	//Solution(test)
-//	//fmt.Println(reverse(test))
-//
-//	fmt.Println(subarraySum([]int{2, -2, 3, 0, 4, -7}))
-//	//fmt.Println(citiesNetworkRank([]int{1, 2, 3, 3}, []int{2, 3, 1, 4}, 4))
-//}
+func main() {
+	//test := 10011
+	//Solution(test)
+	//fmt.Println(reverse(test))
+
+	//fmt.Println(subarraySum([]int{2, -2, 3, 0, 4, -7}))
+	fmt.Println(subarraySum([]int{4, 1, 2, -1, -2}))
+	//fmt.Println(citiesNetworkRank([]int{1, 2, 3, 3}, []int{2, 3, 1, 4}, 4))
+}
 
 func Solution(N int) {
 	var enable_print int
@@ -38,6 +39,18 @@ func reverse(x int) int {
 	return res
 }
 
+/*
+若 exist[presum]已经存在，说明从上一个presum到这个presum中间的子数组和为0
+参考：
+[]int{4,1,2,-1,-2}
+exist, preSum, res, a
+map[0:1 4:1] 4 0 4
+map[0:1 4:1 5:1] 5 0 1
+map[0:1 4:1 5:1 7:1] 7 0 2
+map[0:1 4:1 5:1 6:1 7:1] 6 0 -1
+map[0:1 4:2 5:1 6:1 7:1] 4 1 -2
+
+*/
 func subarraySum(A []int) int {
 	var res, preSum int
 	exist := make(map[int]int)
