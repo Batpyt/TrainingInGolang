@@ -1,4 +1,4 @@
-package 滑动窗口
+package main
 
 func lengthOfLongestSubstring(s string) int {
 	exist := make(map[string]bool)
