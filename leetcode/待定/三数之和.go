@@ -76,3 +76,37 @@ func threeSum(nums []int) [][]int {
 //func main() {
 //	fmt.Println(threeSum([]int{-1,0,1,2,-1,-4}))
 //}
+
+// -a = b + c
+func th(nums []int) [][]int {
+	sort.Ints(nums)
+	res := make([][]int, 0, 0)
+
+	for first := 0; first < len(nums); first++ {
+		if first > 0 && nums[first] == nums[first-1] {
+			continue
+		}
+
+		third := len(nums) - 1
+		target := -1 * nums[first]
+
+		for second := first + 1; second < len(nums); second++ {
+			if second > first+1 && nums[second] == nums[second-1] {
+				continue
+			}
+
+			for target < nums[second]+nums[third] && second < third {
+				third--
+			}
+
+			if second == third {
+				break
+			}
+
+			if target == nums[second]+nums[third] {
+				res = append(res, []int{nums[first], nums[second], nums[third]})
+			}
+		}
+	}
+	return res
+}
