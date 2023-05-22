@@ -5,10 +5,6 @@ import (
 	"sync"
 )
 
-/*
-双栈排序
-*/
-
 func main() {
 	arr1 := []int{1, 2, 3, 4, 5}
 	arr2 := []string{"a", "b", "c", "d", "e"}
