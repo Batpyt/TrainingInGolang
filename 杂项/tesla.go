@@ -2,15 +2,15 @@ package main
 
 import "fmt"
 
-func main() {
-	//test := 10011
-	//Solution(test)
-	//fmt.Println(reverse(test))
-
-	//fmt.Println(subarraySum([]int{2, -2, 3, 0, 4, -7}))
-	fmt.Println(subarraySum([]int{4, 1, 2, -1, -2}))
-	//fmt.Println(citiesNetworkRank([]int{1, 2, 3, 3}, []int{2, 3, 1, 4}, 4))
-}
+//func main() {
+//	//test := 10011
+//	//Solution(test)
+//	//fmt.Println(reverse(test))
+//
+//	//fmt.Println(subarraySum([]int{2, -2, 3, 0, 4, -7}))
+//	fmt.Println(subarraySum([]int{4, 1, 2, -1, -2}))
+//	//fmt.Println(citiesNetworkRank([]int{1, 2, 3, 3}, []int{2, 3, 1, 4}, 4))
+//}
 
 func Solution(N int) {
 	var enable_print int
