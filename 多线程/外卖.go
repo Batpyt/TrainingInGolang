@@ -44,4 +44,7 @@ func main() {
 	}()
 
 	wg.Wait()
+
+	close(ch)
+	close(ch2)
 }
