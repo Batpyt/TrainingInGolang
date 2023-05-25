@@ -20,16 +20,17 @@ func newWorker(id int, ch chan Token, nextCh chan Token) {
 		nextCh <- token
 	}
 }
-func main() {
-	chs := []chan Token{make(chan Token), make(chan Token), make(chan Token), make(chan Token)}
 
-	// 创建4个worker
-	for i := 0; i < 4; i++ {
-		go newWorker(i, chs[i], chs[(i+1)%4])
-	}
-
-	//首先把令牌交给第一个worker
-	chs[0] <- struct{}{}
-
-	select {}
-}
+//func main() {
+//	chs := []chan Token{make(chan Token), make(chan Token), make(chan Token), make(chan Token)}
+//
+//	// 创建4个worker
+//	for i := 0; i < 4; i++ {
+//		go newWorker(i, chs[i], chs[(i+1)%4])
+//	}
+//
+//	//首先把令牌交给第一个worker
+//	chs[0] <- struct{}{}
+//
+//	select {}
+//}
