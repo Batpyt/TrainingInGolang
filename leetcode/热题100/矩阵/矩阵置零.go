@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 给定一个 m x n 的矩阵，如果一个元素为 0 ，则将其所在行和列的所有元素都设为 0 。请使用 原地 算法。
 
@@ -42,11 +40,11 @@ import "fmt"
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 */
 
-func main() {
-	matrix := [][]int{{1, 1, 0}, {1, 0, 1}, {1, 1, 1}}
-	setZeroes(matrix)
-	fmt.Println(matrix)
-}
+//func main() {
+//	matrix := [][]int{{1, 1, 0}, {1, 0, 1}, {1, 1, 1}}
+//	setZeroes(matrix)
+//	fmt.Println(matrix)
+//}
 
 /*
 我们可以用矩阵的第一行和第一列代替方法一中的两个标记数组，以达到O(1) 的额外空间。
