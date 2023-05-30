@@ -42,20 +42,20 @@ func (m *MyCounter) Cur() uint64 {
 	return res
 }
 
-func main() {
-	var c Counter = &MyCounter{}
-
-	c.Dec()
-	wg := sync.WaitGroup{}
-	for i := 0; i < 100; i++ {
-		wg.Add(1)
-		go func() {
-			defer wg.Done()
-			c.Inc()
-		}()
-	}
-
-	wg.Wait()
-
-	fmt.Println(c.Cur())
-}
+//func main() {
+//	var c Counter = &MyCounter{}
+//
+//	c.Dec()
+//	wg := sync.WaitGroup{}
+//	for i := 0; i < 100; i++ {
+//		wg.Add(1)
+//		go func() {
+//			defer wg.Done()
+//			c.Inc()
+//		}()
+//	}
+//
+//	wg.Wait()
+//
+//	fmt.Println(c.Cur())
+//}
