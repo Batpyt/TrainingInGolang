@@ -6,26 +6,26 @@ package main
 /*
 https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
 */
-func main() {
-	l := &ListNode{
-		Val: 1,
-		Next: &ListNode{
-			Val: 2,
-			Next: &ListNode{
-				Val: 3,
-				Next: &ListNode{
-					Val: 4,
-					Next: &ListNode{
-						Val:  5,
-						Next: nil,
-					},
-				},
-			},
-		},
-	}
-
-	_ = removeNthFromEnd(l, 2)
-}
+//func main() {
+//	l := &ListNode{
+//		Val: 1,
+//		Next: &ListNode{
+//			Val: 2,
+//			Next: &ListNode{
+//				Val: 3,
+//				Next: &ListNode{
+//					Val: 4,
+//					Next: &ListNode{
+//						Val:  5,
+//						Next: nil,
+//					},
+//				},
+//			},
+//		},
+//	}
+//
+//	_ = removeNthFromEnd(l, 2)
+//}
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	slow := &ListNode{}
 	quick := head
