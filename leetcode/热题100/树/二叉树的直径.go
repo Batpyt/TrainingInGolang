@@ -1,4 +1,4 @@
-package 树
+package main
 
 /*
 给你一棵二叉树的根节点，返回该树的 直径 。

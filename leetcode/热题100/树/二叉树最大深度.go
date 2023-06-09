@@ -1,4 +1,4 @@
-package 树
+package main
 
 func maxDepth(root *TreeNode) int {
 	if root == nil {
