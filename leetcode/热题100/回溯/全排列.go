@@ -34,8 +34,8 @@ func permute(nums []int) [][]int {
 	//当前遍历过的元素，已遍历过存入path的就标为true
 	used := make([]bool, len(nums))
 
-	var dfs func([]int, int)
-	dfs = func(nums []int, cur int) {
+	var dfs func(int)
+	dfs = func(cur int) {
 		//cur表示当前path的长度，path长度==nums时就可以计入结果了
 		if cur == len(nums) {
 			temp := make([]int, len(path))
@@ -52,7 +52,7 @@ func permute(nums []int) [][]int {
 				//标记used已用过
 				used[i] = true
 				//下一层迭代
-				dfs(nums, cur+1)
+				dfs(cur + 1)
 				//恢复现场
 				used[i] = false
 				path = path[:len(path)-1]
@@ -60,6 +60,6 @@ func permute(nums []int) [][]int {
 		}
 	}
 
-	dfs(nums, 0)
+	dfs(0)
 	return res
 }
