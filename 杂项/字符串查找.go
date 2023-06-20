@@ -1,17 +1,15 @@
 package main
 
-import "fmt"
-
 /*
 helloworld
      world
 */
 
-func main() {
-	fmt.Println(findStr("helloworld", "world"))
-	fmt.Println(findStr("helloworld", "llo"))
-	fmt.Println(findStr("helloworld", "iii"))
-}
+//func main() {
+//	fmt.Println(findStr("helloworld", "world"))
+//	fmt.Println(findStr("helloworld", "llo"))
+//	fmt.Println(findStr("helloworld", "iii"))
+//}
 
 func findStr(str, target string) int {
 	if len(target) > len(str) {

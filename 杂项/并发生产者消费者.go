@@ -17,24 +17,24 @@ select users.name users inner join (select user_id, count(price) as c from order
 
  */
 
-func main() {
-	wgProducer := &sync.WaitGroup{}
-	wgConsumer := &sync.WaitGroup{}
-
-	chCount := 10
-	ch := make(chan int, chCount)
-	wgProducer.Add(1)
-	go producer(chCount, ch, wgProducer)
-
-	for i := 0; i < 10; i++ {
-		wgConsumer.Add(1)
-		go consumer(i, ch, wgConsumer)
-	}
-
-	wgProducer.Wait()
-	close(ch)
-	wgConsumer.Wait()
-}
+//func main() {
+//	wgProducer := &sync.WaitGroup{}
+//	wgConsumer := &sync.WaitGroup{}
+//
+//	chCount := 10
+//	ch := make(chan int, chCount)
+//	wgProducer.Add(1)
+//	go producer(chCount, ch, wgProducer)
+//
+//	for i := 0; i < 10; i++ {
+//		wgConsumer.Add(1)
+//		go consumer(i, ch, wgConsumer)
+//	}
+//
+//	wgProducer.Wait()
+//	close(ch)
+//	wgConsumer.Wait()
+//}
 
 func producer(count int, ch chan int, wg *sync.WaitGroup) {
 	defer wg.Done()
