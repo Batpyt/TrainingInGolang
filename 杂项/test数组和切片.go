@@ -1,8 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
 func main() {
+	runtime.GOMAXPROCS(4)
+	fmt.Println(runtime.NumCPU())
 	sliceTest()
 	arrTest()
 }
