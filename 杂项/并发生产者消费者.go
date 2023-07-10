@@ -1,10 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"sync"
-)
-
 /*
 1. users: id, name; orders: id, user_id, price
 */
@@ -31,21 +26,21 @@ select users.name users inner join (select user_id, count(price) as c from order
 //		go consumer(i, ch, wgConsumer)
 //	}
 //
-//	wgProducer.Wait()
-//	close(ch)
-//	wgConsumer.Wait()
+////	wgProducer.Wait()
+////	close(ch)
+////	wgConsumer.Wait()
+////}
+//
+////func producer(count int, ch chan int, wg *sync.WaitGroup) {
+////	defer wg.Done()
+////	for i := 0; i < count; i++ {
+////		ch <- i
+////	}
+////}
+//
+//func consumer(index int, ch chan int, wg *sync.WaitGroup) {
+//	defer wg.Done()
+//	for num := range ch {
+//		fmt.Println(num, " from ", index)
+//	}
 //}
-
-func producer(count int, ch chan int, wg *sync.WaitGroup) {
-	defer wg.Done()
-	for i := 0; i < count; i++ {
-		ch <- i
-	}
-}
-
-func consumer(index int, ch chan int, wg *sync.WaitGroup) {
-	defer wg.Done()
-	for num := range ch {
-		fmt.Println(num, " from ", index)
-	}
-}

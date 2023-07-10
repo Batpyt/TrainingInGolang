@@ -2,15 +2,14 @@ package main
 
 import (
 	"fmt"
-	"runtime"
 )
 
-func main() {
-	runtime.GOMAXPROCS(4)
-	fmt.Println(runtime.NumCPU())
-	sliceTest()
-	arrTest()
-}
+//func main() {
+//	runtime.GOMAXPROCS(4)
+//	fmt.Println(runtime.NumCPU())
+//	sliceTest()
+//	arrTest()
+//}
 
 func sliceTest() {
 	s := make([]int, 3, 5)

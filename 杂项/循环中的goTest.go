@@ -5,10 +5,11 @@ import (
 	"sync"
 )
 
-func main() {
-	test2()
-	test3()
-}
+//
+//func main() {
+//	test2()
+//	test3()
+//}
 
 func test1() {
 	total, sum := 0, 0
