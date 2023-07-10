@@ -3,8 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	//list := []int{4,2,1,5,67,7,4,2,12,13,1,331,312,5,6,656565656,343,43,34,4}
-	list := []int{5, 1, 9, 9, 2, 3, 4, 6, 7}
+	list := []int{4, 2, 1, 5, 67, 7, 4, 2, 12, 13, 1, 331, 312, 5, 6, 656565656, 343, 43, 34, 4}
+	//list := []int{5, 1, 9, 9, 2, 3, 4, 6, 7}
+	//list := []int{1,2,3,2,1,5,6,7,777,5,6,77744,999999,4,3,111}
 	quickSort(list, 0, len(list)-1)
 	fmt.Println(list)
 }
@@ -31,7 +32,6 @@ func quickSort(list []int, low, high int) {
 [1 2 3 4 5 7 9 6 9]
 [1 2 3 4 5 6 7 9 9]
 [1 2 3 4 5 6 7 9 9]
-
 */
 func partition(list []int, low, high int) int {
 	//直接将数组的第一个选为基准值
