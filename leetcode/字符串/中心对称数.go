@@ -34,6 +34,7 @@ func main() {
 	fmt.Println(s1)
 	s6 := rotate(15)
 	//fmt.Println(rotate(6))
+	fmt.Println(len(s6))
 	for _, s := range s6 {
 		if !isRotated(s) {
 			fmt.Println(s, " is not rotated")
